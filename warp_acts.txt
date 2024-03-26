@@ -1,0 +1,16 @@
+ACT_WARP_DOOR_SPAWN: bhvDoorWarp
+ACT_IDLE: bhvStar, bhvInstantActiveWarp
+ACT_EMERGE_FROM_PIPE: bhvExitPodiumWarp, bhvWarp, bhvWarpPipe
+ACT_TELEPORT_FADE_IN: bhvFadingWarp
+ACT_SPAWN_NO_SPIN_AIRBORNE: bhvAirborneWarp
+ACT_HARD_BACKWARD_AIR_KB: bhvHardAirKnockBackWarp
+ACT_SPAWN_SPIN_AIRBORNE: bhvSpinAirborneCircleWarp, bhvSpinAirborneWarp
+ACT_FALLING_DEATH_EXIT: bhvDeathWarp
+ACT_FLYING: bhvFlyingWarp
+ACT_WATER_IDLE: bhvSwimmingWarp
+ACT_EXIT_AIRBORNE: bhvPaintingStarCollectWarp
+ACT_DEATH_EXIT: bhvPaintingDeathWarp
+ACT_FALLING_EXIT_AIRBORNE: bhvAirborneStarCollectWarp
+ACT_UNUSED_DEATH_EXIT: bhvAirborneDeathWarp
+ACT_SPECIAL_EXIT_AIRBORNE: bhvLaunchStarCollectWarp
+ACT_SPECIAL_DEATH_EXIT: bhvLaunchDeathWarp
