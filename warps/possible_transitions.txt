@@ -1,0 +1,222 @@
+
+ACT_SPECIAL_EXIT_AIRBORNE:
+	bbh-1:F0 => castle_courtyard-1:0A
+	bowser_1-1:F0 => castle_inside-1:24
+	bowser_2-1:F0 => castle_inside-3:36
+	cotmc-1:F0 => castle_inside-3:34
+	hmc-1:F0 => castle_inside-3:34
+	rr-1:F0 => castle_inside-2:3A
+	vcutm-1:F0 => castle_grounds-1:08
+	wmotr-1:F0 => castle_inside-2:38
+
+ACT_SPECIAL_DEATH_EXIT:
+	bbh-1:F1 => castle_courtyard-1:0B
+	bitdw-1:F1 => castle_inside-1:25
+	bitfs-1:F1 => castle_inside-3:68
+	bits-1:F1 => castle_inside-2:6B
+	cotmc-1:F1 => castle_inside-3:66
+	hmc-1:F1 => castle_inside-3:66
+	rr-1:F1 => castle_inside-2:6C
+	vcutm-1:F1 => castle_grounds-1:06
+	wmotr-1:F1 => castle_inside-2:6D
+
+ACT_SPAWN_SPIN_AIRBORNE:
+	bitdw-1:0B => bowser_1-1:0A
+	bitfs-1:0B => bowser_2-1:0A
+	bits-1:0B => bowser_3-1:0A
+	castle_courtyard-1:05 => bbh-1:0A
+	castle_inside-1:00 => bob-1:0A
+	castle_inside-1:01 => bob-1:0A
+	castle_inside-1:02 => bob-1:0A
+	castle_inside-1:03 => ccm-1:0A
+	castle_inside-1:04 => ccm-1:0A
+	castle_inside-1:05 => ccm-1:0A
+	castle_inside-1:06 => wf-1:0A
+	castle_inside-1:07 => wf-1:0A
+	castle_inside-1:08 => wf-1:0A
+	castle_inside-1:09 => jrb-1:0A
+	castle_inside-2:18 => wdw-1:0A
+	castle_inside-2:19 => wdw-1:0A
+	castle_inside-2:1A => wdw-1:0A
+	castle_inside-2:1B => thi-2:0A
+	castle_inside-2:1C => thi-2:0A
+	castle_inside-2:1D => thi-2:0A
+	castle_inside-2:1E => ttm-1:0A
+	castle_inside-2:1F => ttm-1:0A
+	castle_inside-2:20 => ttm-1:0A
+	castle_inside-2:21 => ttc-1:0A
+	castle_inside-2:22 => ttc-1:0A
+	castle_inside-2:23 => ttc-1:0A
+	castle_inside-2:24 => sl-1:0A
+	castle_inside-2:25 => sl-1:0A
+	castle_inside-2:26 => sl-1:0A
+	castle_inside-2:27 => thi-1:0A
+	castle_inside-2:28 => thi-1:0A
+	castle_inside-2:29 => thi-1:0A
+	castle_inside-2:2A => rr-1:0A
+	castle_inside-3:0C => lll-1:0A
+	castle_inside-3:0D => lll-1:0A
+	castle_inside-3:0E => lll-1:0A
+	castle_inside-3:0F => ssl-1:0A
+	castle_inside-3:10 => ssl-1:0A
+	castle_inside-3:11 => ssl-1:0A
+	castle_inside-3:2A => hmc-1:0A
+	castle_inside-3:15 => ddd-1:0A
+	castle_inside-3:16 => ddd-1:0A
+	castle_inside-3:17 => ddd-1:0A
+
+ACT_TELEPORT_FADE_IN:
+	bob-1:0B => bob-1:0C
+	bob-1:0C => bob-1:0B
+	bob-1:0D => bob-1:0E
+	bob-1:0E => bob-1:0D
+	ccm-1:1F => ccm-1:20
+	ccm-1:20 => ccm-1:1F
+	lll-1:0C => lll-1:0D
+	lll-1:0D => lll-1:0C
+	rr-1:0B => rr-1:0C
+	rr-1:0C => rr-1:0B
+	sl-1:0D => sl-1:0E
+	sl-1:0E => sl-1:0D
+	ssl-1:1F => ssl-1:20
+	ssl-1:20 => ssl-1:1F
+	ssl-2:15 => ssl-2:16
+	ssl-2:16 => ssl-2:15
+	thi-2:0B => thi-2:0C
+	thi-2:0C => thi-2:0B
+	ttm-1:15 => ttm-1:16
+	ttm-1:16 => ttm-1:15
+	wdw-1:0B => wdw-1:0C
+	wdw-1:0C => wdw-1:0B
+	wf-1:0B => wf-1:0C
+	wf-1:0C => wf-1:0B
+
+ACT_EXIT_AIRBORNE:
+	bob-1:F0 => castle_inside-1:32
+	ccm-1:F0 => castle_inside-1:33
+	ccm-2:F0 => castle_inside-1:33
+	jrb-1:F0 => castle_inside-1:35
+	jrb-2:F0 => castle_inside-1:35
+	lll-1:F0 => castle_inside-3:32
+	lll-2:F0 => castle_inside-3:32
+	sl-1:F0 => castle_inside-2:36
+	sl-2:F0 => castle_inside-2:36
+	ssl-1:F0 => castle_inside-3:33
+	ssl-2:F0 => castle_inside-3:33
+	ssl-3:F0 => castle_inside-3:33
+	ttc-1:F0 => castle_inside-2:35
+	ttm-1:F0 => castle_inside-2:34
+	ttm-2:F0 => castle_inside-2:34
+	ttm-3:F0 => castle_inside-2:34
+	ttm-4:F0 => castle_inside-2:34
+	wdw-1:F0 => castle_inside-2:32
+	wdw-2:F0 => castle_inside-2:32
+	wf-1:F0 => castle_inside-1:34
+
+ACT_DEATH_EXIT:
+	bob-1:F1 => castle_inside-1:64
+	ccm-1:F1 => castle_inside-1:65
+	ccm-2:F1 => castle_inside-1:65
+	jrb-1:F1 => castle_inside-1:67
+	jrb-2:F1 => castle_inside-1:67
+	lll-1:F1 => castle_inside-3:64
+	lll-2:F1 => castle_inside-3:64
+	sl-1:F1 => castle_inside-2:68
+	sl-2:F1 => castle_inside-2:68
+	ssl-1:F1 => castle_inside-3:65
+	ssl-2:F1 => castle_inside-3:65
+	ssl-3:F1 => castle_inside-3:65
+	ttc-1:F1 => castle_inside-2:67
+	ttm-1:F1 => castle_inside-2:66
+	ttm-2:F1 => castle_inside-2:66
+	ttm-3:F1 => castle_inside-2:66
+	ttm-4:F1 => castle_inside-2:66
+	wdw-1:F1 => castle_inside-2:64
+	wdw-2:F1 => castle_inside-2:64
+	wf-1:F1 => castle_inside-1:66
+
+ACT_FALLING_DEATH_EXIT:
+	bowser_1-1:F1 => bitdw-1:0C
+	bowser_2-1:F1 => bitfs-1:0C
+	bowser_3-1:F1 => bits-1:0C
+	castle_courtyard-1:F1 => castle_grounds-1:03
+	castle_grounds-1:F1 => castle_grounds-1:03
+	castle_inside-1:F1 => castle_grounds-1:03
+	castle_inside-2:F1 => castle_grounds-1:03
+	castle_inside-3:F1 => castle_grounds-1:03
+	ddd-1:F1 => castle_inside-3:67
+	ddd-2:F1 => castle_inside-3:67
+	pss-1:F1 => castle_inside-1:23
+	sa-1:F1 => castle_inside-1:28
+	thi-1:F1 => castle_inside-2:69
+	thi-2:F1 => castle_inside-2:65
+	thi-3:F1 => castle_inside-2:69
+	totwc-1:F1 => castle_inside-1:23
+
+ACT_WARP_DOOR_SPAWN:
+	castle_courtyard-1:01 => castle_inside-1:02
+	castle_grounds-1:00 => castle_inside-1:00
+	castle_grounds-1:01 => castle_inside-1:01
+	castle_grounds-1:02 => castle_inside-3:02
+	castle_inside-2:00 => castle_inside-1:03
+	castle_inside-2:01 => castle_inside-1:04
+	castle_inside-3:00 => castle_inside-1:05
+	castle_inside-3:01 => castle_inside-1:06
+	castle_inside-3:02 => castle_grounds-1:02
+	ccm-1:14 => ccm-2:14
+	ccm-2:14 => ccm-1:14
+
+ACT_SPAWN_NO_SPIN_AIRBORNE:
+	castle_grounds-1:05 => vcutm-1:0A
+	castle_inside-1:0A => pss-1:0A
+	castle_inside-1:0B => bitdw-1:0A
+	castle_inside-2:0A => wmotr-1:0A
+	castle_inside-2:0B => bits-1:0A
+	castle_inside-3:18 => bitfs-1:0A
+	ccm-1:1E => ccm-2:0A
+	cotmc-1:F3 => castle_grounds-1:14
+	hmc-1:0B => cotmc-1:0A
+	lll-1:0B => lll-2:0A
+	pss-1:F3 => castle_inside-1:20
+	ssl-1:14 => ssl-2:0A
+	ssl-1:1E => ssl-2:14
+	thi-1:0D => thi-3:0B
+	totwc-1:F3 => castle_inside-1:20
+	ttm-1:00 => ttm-2:0A
+	ttm-1:01 => ttm-2:0A
+	ttm-1:02 => ttm-2:0A
+	ttm-4:0A => ttm-1:14
+	wmotr-1:F3 => castle_grounds-1:0A
+
+ACT_WATER_IDLE:
+	castle_inside-1:0C => sa-1:0A
+	ddd-2:F3 => castle_grounds-1:1E
+	jrb-1:F3 => jrb-2:0A
+	vcutm-1:F3 => castle_grounds-1:07
+
+ACT_FLYING:
+	castle_inside-1:F2 => totwc-1:0A
+
+ACT_FALLING_EXIT_AIRBORNE:
+	ddd-1:F0 => castle_inside-3:35
+	ddd-2:F0 => castle_inside-3:35
+	pss-1:F0 => castle_inside-1:26
+	sa-1:F0 => castle_inside-1:27
+	thi-1:F0 => castle_inside-2:37
+	thi-2:F0 => castle_inside-2:33
+	thi-3:F0 => castle_inside-2:37
+	totwc-1:F0 => castle_inside-1:26
+
+ACT_IDLE:
+	sl-1:0C => sl-2:0A
+	sl-2:0B => sl-1:0B
+	thi-1:0C => thi-3:0A
+	thi-3:0C => thi-1:0B
+
+ACT_EMERGE_FROM_PIPE:
+	thi-1:32 => thi-2:32
+	thi-1:33 => thi-2:33
+	thi-1:34 => thi-2:34
+	thi-2:32 => thi-1:32
+	thi-2:33 => thi-1:33
+	thi-2:34 => thi-1:34
