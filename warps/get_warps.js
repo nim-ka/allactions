@@ -142,8 +142,13 @@ for (let levelName of levels) {
 
 			if (command.endsWith("WARP_NODE")) {
 				let [id, destLevel, destArea, destNode] = params
-				let srcWarpId = `${levelName}-${area}:${id.replace("0x", "")}`
-				let destWarpId = `${levelMacroToLevelName[destLevel]}-${+destArea}:${destNode.replace("0x", "")}`
+				id = (command.startsWith("PAINTING") ? "PT" : "") + id.replace("0x", "")
+				destLevel = levelMacroToLevelName[destLevel]
+				destArea = +destArea
+				destNode = destNode.replace("0x", "")
+
+				let srcWarpId = `${levelName}-${area}:${id}`
+				let destWarpId = `${destLevel}-${+destArea}:${destNode}`
 				warpNodes[srcWarpId] = destWarpId
 			}
 		}

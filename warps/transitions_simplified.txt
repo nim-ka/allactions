@@ -1,0 +1,189 @@
+ACT_SPECIAL_EXIT_AIRBORNE:
+	bbh-1 regular exit
+	bowser_1-1 regular exit
+	bowser_2-1 regular exit
+	cotmc-1 regular exit
+	hmc-1 regular exit
+	rr-1 regular exit
+	vcutm-1 regular exit
+	wmotr-1 regular exit
+
+ACT_SPECIAL_DEATH_EXIT:
+	bbh-1 death exit
+	bitdw-1 death exit
+	bitfs-1 death exit
+	bits-1 death exit
+	cotmc-1 death exit
+	hmc-1 death exit
+	rr-1 death exit
+	vcutm-1 death exit
+	wmotr-1 death exit
+
+ACT_SPAWN_SPIN_AIRBORNE:
+	bitdw-1 enter bowser_1-1
+	bitfs-1 enter bowser_2-1
+	bits-1 enter bowser_3-1
+	castle_courtyard-1 enter bbh-1
+	castle_inside-1 enter bob-1
+	castle_inside-1 enter ccm-1
+	castle_inside-1 enter wf-1
+	castle_inside-1 enter jrb-1
+	castle_inside-2 enter wdw-1
+	castle_inside-2 enter thi-2
+	castle_inside-2 enter ttm-1
+	castle_inside-2 enter ttc-1
+	castle_inside-2 enter sl-1
+	castle_inside-2 enter thi-1
+	castle_inside-2 enter rr-1
+	castle_inside-3 enter lll-1
+	castle_inside-3 enter ssl-1
+	castle_inside-3 enter hmc-1
+	castle_inside-3 enter ddd-1
+
+ACT_TELEPORT_FADE_IN:
+	bob-1 teleporters
+	ccm-1 teleporters
+	lll-1 teleporters
+	rr-1 teleporters
+	sl-1 teleporters
+	ssl-1 teleporters
+	ssl-2 teleporters
+	thi-2 teleporters
+	ttm-1 teleporters
+	wdw-1 teleporters
+	wf-1 teleporters
+
+ACT_EXIT_AIRBORNE:
+	bob-1 regular exit
+	ccm-1 regular exit
+	ccm-2 regular exit
+	jrb-1 regular exit
+	jrb-2 regular exit
+	lll-1 regular exit
+	lll-2 regular exit
+	sl-1 regular exit
+	sl-2 regular exit
+	ssl-1 regular exit
+	ssl-2 regular exit
+	ssl-3 regular exit
+	ttc-1 regular exit
+	ttm-1 regular exit
+	ttm-2 regular exit
+	ttm-3 regular exit
+	ttm-4 regular exit
+	wdw-1 regular exit
+	wdw-2 regular exit
+	wf-1 regular exit
+
+ACT_DEATH_EXIT:
+	bob-1 death exit
+	ccm-1 death exit
+	ccm-2 death exit
+	jrb-1 death exit
+	jrb-2 death exit
+	lll-1 death exit
+	lll-2 death exit
+	sl-1 death exit
+	sl-2 death exit
+	ssl-1 death exit
+	ssl-2 death exit
+	ssl-3 death exit
+	ttc-1 death exit
+	ttm-1 death exit
+	ttm-2 death exit
+	ttm-3 death exit
+	ttm-4 death exit
+	wdw-1 death exit
+	wdw-2 death exit
+	wf-1 death exit
+
+ACT_FALLING_DEATH_EXIT:
+	bowser_1-1 death exit
+	bowser_2-1 death exit
+	bowser_3-1 death exit
+	castle_courtyard-1 death exit
+	castle_grounds-1 death exit
+	castle_inside-1 death exit
+	castle_inside-2 death exit
+	castle_inside-3 death exit
+	ddd-1 death exit
+	ddd-2 death exit
+	pss-1 death exit
+	sa-1 death exit
+	thi-1 death exit
+	thi-2 death exit
+	thi-3 death exit
+	totwc-1 death exit
+
+ACT_WARP_DOOR_SPAWN:
+	castle_courtyard-1 enter castle_inside-1
+	castle_grounds-1 enter castle_inside-1
+	castle_grounds-1 enter castle_inside-1
+	castle_grounds-1 enter castle_inside-3
+	castle_inside-1 enter castle_grounds-1
+	castle_inside-1 enter castle_grounds-1
+	castle_inside-1 enter castle_courtyard-1
+	castle_inside-1 enter castle_inside-2
+	castle_inside-1 enter castle_inside-2
+	castle_inside-1 enter castle_inside-3
+	castle_inside-1 enter castle_inside-3
+	castle_inside-2 enter castle_inside-1
+	castle_inside-2 enter castle_inside-1
+	castle_inside-3 enter castle_inside-1
+	castle_inside-3 enter castle_inside-1
+	castle_inside-3 enter castle_grounds-1
+	ccm-1 enter cabin (door)
+	ccm-2 exit cabin
+
+ACT_SPAWN_NO_SPIN_AIRBORNE:
+	castle_grounds-1 enter vcutm-1
+	castle_inside-1 enter pss-1
+	castle_inside-1 enter bitdw-1
+	castle_inside-2 enter wmotr-1
+	castle_inside-2 enter bits-1
+	castle_inside-3 enter bitfs-1
+	ccm-1 enter cabin above
+	cotmc-1 warp floor
+	hmc-1 enter cotmc-1
+	lll-1 enter lll-2
+	pss-1 warp floor
+	ssl-1 enter pyramid below
+	ssl-1 enter pyramid above
+	thi-1 enter cave above
+	totwc-1 warp floor
+	ttm-1 enter slide
+	ttm-4 exit slide
+	wmotr-1 warp floor
+
+ACT_WATER_IDLE:
+	castle_inside-1 enter sa-1
+	ddd-2 warp floor
+	jrb-1 warp floor
+	vcutm-1 warp floor
+
+ACT_FLYING:
+	castle_inside-1 enter totwc-1
+
+ACT_FALLING_EXIT_AIRBORNE:
+	ddd-1 regular exit
+	ddd-2 regular exit
+	pss-1 regular exit
+	sa-1 regular exit
+	thi-1 regular exit
+	thi-2 regular exit
+	thi-3 regular exit
+	totwc-1 regular exit
+
+ACT_IDLE:
+	sl-1 enter igloo
+	sl-2 exit igloo
+	thi-1 enter cave below
+	thi-3 exit cave below
+
+ACT_EMERGE_FROM_PIPE:
+	thi-1 pipe
+	thi-1 pipe
+	thi-1 pipe
+	thi-2 pipe
+	thi-2 pipe
+	thi-2 pipe
