@@ -1,24 +1,60 @@
+Uncompleted
+
 R | ACT_DROWNING
+	- water
 R | ACT_WATER_DEATH
-R | ACT_CAUGHT_IN_WHIRLPOOL
-R | ACT_INTRO_CUTSCENE
+	- water
 R | ACT_STAR_DANCE_EXIT
+	- 
 R | ACT_STAR_DANCE_WATER
+	- 
 R | ACT_FALL_AFTER_STAR_GRAB
+	- 
 R | ACT_STAR_DANCE_NO_EXIT
-R | ACT_QUICKSAND_DEATH
+	- 
 R | ACT_ELECTROCUTION: ACT_SHOCKED
-R | ACT_SUFFOCATION: ACT_STANDING_DEATH
+	- 
 R | ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
+	- 
 R | ACT_DEATH_ON_BACK: ACT_HARD_BACKWARD_GROUND_KB
-R | ACT_EATEN_BY_BUBBA
+	- 
 R | ACT_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
-R | ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-R | ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-R | ACT_SPECIAL_EXIT_AIRBORNE
-R | ACT_SPECIAL_DEATH_EXIT
+	- BoB; WF; JRB; CCM; LLL; SSL; SL; WDW; TTM; TTC
+R | ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
+	- BBH; HMC; RR; CotMC; VCutM; WMotR; BitDW Fight; BitFS Fight
 R | ACT_FALLING_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
+	- DDD; THI; PSS; SA; TotWC
+
+-------------------------------------------
+
+Completed
+
+R | ACT_CAUGHT_IN_WHIRLPOOL
+	- DDD
+R | ACT_INTRO_CUTSCENE
+	- N/A
+R | ACT_QUICKSAND_DEATH
+	- SSL
+R | ACT_SUFFOCATION: ACT_STANDING_DEATH
+	- HMC
+R | ACT_EATEN_BY_BUBBA
+	- THI
+R | ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
+	- BitS
+R | ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+	- BoB; WF; JRB; CCM; BBH; HMC; LLL; SSL; DDD; SL; WDW; TTM; THI; RR; BitDW Fight; BitFS Fight; BitS Fight
+R | ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+	- BoB; WF; JRB; CCM; LLL; SSL; SL; WDW; TTM; TTC
+R | ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+	- DDD; THI; PSS; SA; TotWC; BitDW Fight; BitFS Fight; BitS Fight; Castle Grounds; Castle Inside; Castle Courtyard
+R | ACT_SPECIAL_DEATH_EXIT: ACT_HARD_BACKWARD_GROUND_KB
+	- BBH; HMC; RR; CotMC; VCutM; WMotR; BitDW; BitFS; BitS
+R | ACT_SPAWN_NO_SPIN_LANDING: ACT_SPAWN_NO_SPIN_AIRBORNE
+	- PSS (enter/exit); TotWC (exit); VCutM; WMotR (enter/exit); BitDW; BitFS; BitS; CCM (cabin); CotMC (enter/exit); LLL(volcano); TTM (slide, enter/exit)
 R | ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
+	- Castle Courtyard
+
+-------------------------------------------
 
 Levels that must be entered and why:
 - Castle Grounds/Inside/Courtyard
@@ -27,10 +63,14 @@ Levels that must be entered and why:
 - BBH
 	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
 - HMC
-	ACT_COUGHING: ACT_IDLE
 	ACT_SUFFOCATION: ACT_STANDING_DEATH
+	ACT_COUGHING: ACT_IDLE
 - SSL
+	ACT_QUICKSAND_DEATH
 	ACT_TORNADO_TWIRLING: ACT_TWIRLING
+	ACT_IN_QUICKSAND
+	ACT_QUICKSAND_JUMP_LAND
+	ACT_HOLD_QUICKSAND_JUMP_LAND
 - DDD
 	ACT_CAUGHT_IN_WHIRLPOOL
 - THI
@@ -40,6 +80,8 @@ Levels that must be entered and why:
 	ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
 
 Save file: File A empty
+
+These segments are unordered except the start and end of the run:
 
 -------------------------------------------
 START OF RUN:
@@ -52,11 +94,76 @@ START OF RUN:
 - Reset the console.
 
 -------------------------------------------
+WF SEGMENT:
+-------------------------------------------
+
+- Enter WF.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Ride Hoot.
+	ACT_RIDING_HOOT
+
+-------------------------------------------
+BBH SEGMENT:
+-------------------------------------------
+
+- Enter BBH.
+	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+
+-------------------------------------------
+HMC SEGMENT:
+-------------------------------------------
+
+- Enter HMC.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Die of suffocation.
+	ACT_SUFFOCATION: ACT_STANDING_DEATH
+	ACT_SPECIAL_DEATH_EXIT: ACT_HARD_BACKWARD_GROUND_KB
+
+-------------------------------------------
+SSL SEGMENT:
+-------------------------------------------
+
+- Enter SSL.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- In some order:
+	- Twirl in a tornado.
+		ACT_TORNADO_TWIRLING: ACT_TWIRLING
+	- Quicksand sequence.
+		ACT_IN_QUICKSAND
+		ACT_QUICKSAND_JUMP_LAND
+		ACT_HOLD_QUICKSAND_JUMP_LAND
+- Die of quicksand.
+	ACT_QUICKSAND_DEATH
+	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+-------------------------------------------
+DDD SEGMENT:
+-------------------------------------------
+
+- Enter DDD.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Die to the whirlpool.
+	ACT_CAUGHT_IN_WHIRLPOOL
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+-------------------------------------------
+THI SEGMENT:
+-------------------------------------------
+
+- Enter THI.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Enter a pipe.
+	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
+- Die to Bubba.
+	ACT_EATEN_BY_BUBBA
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+-------------------------------------------
 END OF RUN:
 -------------------------------------------
 
 - Enter BitS.
-	ACT_DISAPPEARED
 	ACT_SPAWN_NO_SPIN_LANDING: ACT_SPAWN_NO_SPIN_AIRBORNE
 - Enter BitS fight.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
