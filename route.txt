@@ -1,3 +1,6 @@
+R | ACT_DROWNING
+R | ACT_WATER_DEATH
+R | ACT_CAUGHT_IN_WHIRLPOOL
 R | ACT_INTRO_CUTSCENE
 R | ACT_STAR_DANCE_EXIT
 R | ACT_STAR_DANCE_WATER
@@ -17,17 +20,30 @@ R | ACT_SPECIAL_DEATH_EXIT
 R | ACT_FALLING_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
 R | ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
 
-Courses that must be entered and why:
+Levels that must be entered and why:
+- Castle Grounds/Inside/Courtyard
+- WF
+	ACT_RIDING_HOOT
 - BBH
 	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
+- HMC
+	ACT_COUGHING: ACT_IDLE
+	ACT_SUFFOCATION: ACT_STANDING_DEATH
+- SSL
+	ACT_TORNADO_TWIRLING: ACT_TWIRLING
+- DDD
+	ACT_CAUGHT_IN_WHIRLPOOL
 - THI
 	ACT_EATEN_BY_BUBBA
+	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
 - BitS
 	ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
 
 Save file: File A empty
 
-START OF ROUTE:
+-------------------------------------------
+START OF RUN:
+-------------------------------------------
 
 - Start the game.
 	ACT_UNINITIALIZED
@@ -35,7 +51,9 @@ START OF ROUTE:
 	ACT_INTRO_CUTSCENE
 - Reset the console.
 
-END OF ROUTE:
+-------------------------------------------
+END OF RUN:
+-------------------------------------------
 
 - Enter BitS.
 	ACT_DISAPPEARED
