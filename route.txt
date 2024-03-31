@@ -1,3 +1,5 @@
+In this route, we use the demo to go to BitDW, and use MIPS for ACT_STAR_DANCE_NO_EXIT.
+
 Uncompleted
 
 R | ACT_DROWNING
@@ -7,8 +9,6 @@ R | ACT_WATER_DEATH
 R | ACT_STAR_DANCE_EXIT
 	- 
 R | ACT_STAR_DANCE_WATER
-	- 
-R | ACT_STAR_DANCE_NO_EXIT
 	- 
 R | ACT_ELECTROCUTION: ACT_SHOCKED
 	- JRB; SSL; SL; WDW; TTC; RR; VCutM; BitDW; BitFS; BitS; BitS Fight
@@ -51,6 +51,8 @@ R | ACT_SPAWN_NO_SPIN_LANDING: ACT_SPAWN_NO_SPIN_AIRBORNE
 	- PSS (enter/exit); TotWC (exit); VCutM; WMotR (enter/exit); BitDW; BitFS; BitS; CCM (cabin); CotMC (enter/exit); LLL(volcano); TTM (slide, enter/exit)
 R | ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
 	- Castle Courtyard
+R | ACT_STAR_DANCE_NO_EXIT
+	- 
 
 -------------------------------------------
 
@@ -107,7 +109,7 @@ ACT_UNLOCKING_KEY_DOOR
 ACT_UNLOCKING_STAR_DOOR: ACT_READING_AUTOMATIC_DIALOG
 ACT_ENTERING_STAR_DOOR
 
-Save file: File A empty, File B 120
+Save file: File A 119 (all but 50 star MIPS)
 
 -------------------------------------------
 
@@ -119,9 +121,13 @@ START OF RUN:
 
 - Start the game.
 	ACT_UNINITIALIZED
-- Enter file A.
+- Let the BitDW demo play.
+	ACT_RELEASING_BOWSER: ACT_HOLDING_BOWSER: ACT_PICKING_UP_BOWSER
+	ACT_SHOCKWAVE_BOUNCE
+- Enter file B.
 	ACT_INTRO_CUTSCENE
 - Reset the console.
+- Enter file A.
 
 -------------------------------------------
 WF SEGMENT:
@@ -195,6 +201,24 @@ THI SEGMENT:
 - Die to Bubba.
 	ACT_EATEN_BY_BUBBA
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+-------------------------------------------
+MIPS SEGMENT:
+-------------------------------------------
+
+- Catch MIPS.
+	ACT_READING_NPC_DIALOG
+	ACT_PLACING_DOWN
+- Collect the MIPS star.
+	ACT_STAR_DANCE_NO_EXIT
+
+-------------------------------------------
+YOSHI SEGMENT: (Must come after MIPS segment)
+-------------------------------------------
+
+- Talk to Yoshi.
+	ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
+	ACT_READING_NPC_DIALOG
 
 -------------------------------------------
 END OF RUN:
