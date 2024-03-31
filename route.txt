@@ -72,6 +72,13 @@ Levels that must be entered and why:
 	ACT_IN_QUICKSAND
 	ACT_QUICKSAND_JUMP_LAND
 	ACT_HOLD_QUICKSAND_JUMP_LAND
+- SL
+	SL allows the following:
+		ACT_SHIVERING: ACT_IDLE
+		ACT_LAVA_BOOST_LAND: ACT_LAVA_BOOST
+		ACT_GETTING_BLOWN: ACT_HARD_BACKWARD_AIR_KB
+	If we don't enter SSL, those have to be split up into at least three separate courses.
+	Lava boost can be done very fast in BitFS, and getting blown can be done in TTM, which we might have to go to if we don't use the MIPS star, but that would still leave shivering, and we don't yet have another reason to enter CCM or WMotR.
 - DDD
 	ACT_CAUGHT_IN_WHIRLPOOL
 - THI
@@ -84,12 +91,6 @@ Levels that must be entered and why:
 
 Other sets of levels that must be entered:
 
-- CCM; SL; WMotR
-	ACT_SHIVERING: ACT_IDLE
-- LLL; SL; RR; BitFS; BitFS Fight
-	ACT_LAVA_BOOST_LAND: ACT_LAVA_BOOST
-- SL; TTM
-	ACT_GETTING_BLOWN: ACT_HARD_BACKWARD_AIR_KB
 - WDW; TTC
 	ACT_THROWN_BACKWARD: ACT_GRABBED
 - CCM; TTM; Castle Inside
@@ -98,16 +99,6 @@ Other sets of levels that must be entered:
 	ACT_HOLD_HEAVY_WALKING: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
 - BoB; WDW; TTM; THI; RR; BitS
 	ACT_HEAVY_THROW: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
-
-Say we assume that we do such actions in the courses we already go to (which MIGHT NOT BE FASTER)
-Then:
-
-- CCM; SL; WMotR
-- LLL; SL; RR; BitFS; BitFS Fight
-- SL; TTM
-- WDW; TTC
-
-Minimum is clearly SL and WDW/TTC
 
 -------------------------------------------
 
@@ -187,6 +178,13 @@ DDD SEGMENT:
 - Die to the whirlpool.
 	ACT_CAUGHT_IN_WHIRLPOOL
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+-------------------------------------------
+SL SEGMENT:
+-------------------------------------------
+
+- Enter SL.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
 
 -------------------------------------------
 THI SEGMENT:
