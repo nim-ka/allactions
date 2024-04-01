@@ -74,6 +74,8 @@ Levels that must be entered and why:
 	ACT_IN_QUICKSAND
 	ACT_QUICKSAND_JUMP_LAND
 	ACT_HOLD_QUICKSAND_JUMP_LAND
+- DDD
+	ACT_CAUGHT_IN_WHIRLPOOL
 - SL
 	SL allows the following:
 		ACT_SHIVERING: ACT_IDLE
@@ -81,27 +83,17 @@ Levels that must be entered and why:
 		ACT_GETTING_BLOWN: ACT_HARD_BACKWARD_AIR_KB
 	If we don't enter SSL, those have to be split up into at least three separate courses.
 	Lava boost can be done very fast in BitFS, and getting blown can be done in TTM, which we might have to go to if we don't use the MIPS star, but that would still leave shivering, and we don't yet have another reason to enter CCM or WMotR.
-- DDD
-	ACT_CAUGHT_IN_WHIRLPOOL
+- WDW
+	WDW covers these all in one course and not slowly either:
+		ACT_THROWN_FORWARD: ACT_GRABBED
+		ACT_THROWN_BACKWARD: ACT_GRABBED
+		ACT_HOLD_HEAVY_WALKING: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
+		ACT_HEAVY_THROW: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
 - THI
 	ACT_EATEN_BY_BUBBA
 	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
 - BitS
 	ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
-
-Other sets of levels that must be entered:
-
-- WDW; TTC
-	ACT_THROWN_BACKWARD: ACT_GRABBED
-- CCM; TTM; Castle Inside
-	ACT_PLACING_DOWN
-- BoB; WDW; TTM; THI; RR; BitS
-	ACT_HOLD_HEAVY_WALKING: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
-	ACT_HEAVY_THROW: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
-- BoB; WDW; TTM; THI; RR; BitS
-	ACT_THROWN_FORWARD: ACT_GRABBED
-
-Consider WDW for heavy actions and both thrown actions
 
 -------------------------------------------
 
@@ -212,6 +204,13 @@ SL SEGMENT:
 -------------------------------------------
 
 - Enter SL.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+
+-------------------------------------------
+WDW SEGMENT:
+-------------------------------------------
+
+- Enter WDW.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
 
 -------------------------------------------
