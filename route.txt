@@ -3,56 +3,10 @@ In this route, we use the demo to go to BitDW, and use MIPS for ACT_STAR_DANCE_N
 Uncompleted
 
 R | ACT_WATER_DEATH
-	- water
 R | ACT_ELECTROCUTION: ACT_SHOCKED
-	- JRB; SSL; SL; WDW; TTC; RR; VCutM; BitDW; BitFS; BitS; BitS Fight
 R | ACT_DEATH_ON_BACK: ACT_HARD_BACKWARD_GROUND_KB
-	- 
 
--------------------------------------------
-
-Completed
-
-R | ACT_CAUGHT_IN_WHIRLPOOL
-	- DDD
-R | ACT_INTRO_CUTSCENE
-	- N/A
-R | ACT_QUICKSAND_DEATH
-	- SSL
-R | ACT_SUFFOCATION: ACT_STANDING_DEATH
-	- HMC
-R | ACT_EATEN_BY_BUBBA
-	- THI
-R | ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
-	- BitS
-R | ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
-	- BoB; WF; JRB; CCM; BBH; HMC; LLL; SSL; DDD; SL; WDW; TTM; THI; RR; BitDW Fight; BitFS Fight; BitS Fight
-R | ACT_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
-	- BoB; WF; JRB; CCM; LLL; SSL; SL; WDW; TTM; TTC
-R | ACT_FALLING_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
-	- DDD; THI; PSS; SA; TotWC
-R | ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
-	- BBH; HMC; RR; CotMC; VCutM; WMotR; BitDW Fight; BitFS Fight
-R | ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-	- BoB; WF; JRB; CCM; LLL; SSL; SL; WDW; TTM; TTC
-R | ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-	- DDD; THI; PSS; SA; TotWC; BitDW Fight; BitFS Fight; BitS Fight; Castle Grounds; Castle Inside; Castle Courtyard
-R | ACT_SPECIAL_DEATH_EXIT: ACT_HARD_BACKWARD_GROUND_KB
-	- BBH; HMC; RR; CotMC; VCutM; WMotR; BitDW; BitFS; BitS
-R | ACT_SPAWN_NO_SPIN_LANDING: ACT_SPAWN_NO_SPIN_AIRBORNE
-	- PSS (enter/exit); TotWC (exit); VCutM; WMotR (enter/exit); BitDW; BitFS; BitS; CCM (cabin); CotMC (enter/exit); LLL(volcano); TTM (slide, enter/exit)
-R | ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
-	- Castle Courtyard
-R | ACT_STAR_DANCE_EXIT
-	- 
-R | ACT_STAR_DANCE_NO_EXIT
-	- 
-R | ACT_STAR_DANCE_WATER
-	- 
-R | ACT_DROWNING
-	- water
-R | ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
-	- 
+JRB/SL/WDW
 
 -------------------------------------------
 
@@ -169,18 +123,33 @@ BBH SEGMENT:
 	ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
 
 -------------------------------------------
-HMC SEGMENT:
+BASEMENT SEGMENT:
 -------------------------------------------
+
+- Enter DDD.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Die to the whirlpool.
+	ACT_CAUGHT_IN_WHIRLPOOL
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
+
+- Enter DDD.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Collect a star.
+	ACT_STAR_DANCE_WATER
+	ACT_FALLING_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
+
+[Is it faster to do this before or after HMC/SSL?]
+- Catch MIPS.
+	ACT_READING_NPC_DIALOG
+	ACT_PLACING_DOWN
+- Collect the MIPS star.
+	ACT_STAR_DANCE_NO_EXIT
 
 - Enter HMC.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
 - Die of suffocation.
 	ACT_SUFFOCATION: ACT_STANDING_DEATH
 	ACT_SPECIAL_DEATH_EXIT: ACT_HARD_BACKWARD_GROUND_KB
-
--------------------------------------------
-SSL SEGMENT:
--------------------------------------------
 
 - Enter SSL.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
@@ -195,25 +164,15 @@ SSL SEGMENT:
 	ACT_QUICKSAND_DEATH
 	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
--------------------------------------------
-DDD SEGMENT 1:
--------------------------------------------
-
-- Enter DDD.
-	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
-- Die to the whirlpool.
-	ACT_CAUGHT_IN_WHIRLPOOL
+- Drown in the Castle basement.
+	ACT_DROWNING
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-
--------------------------------------------
-DDD SEGMENT 2:
--------------------------------------------
-
-- Enter DDD.
-	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
-- Collect a star.
-	ACT_STAR_DANCE_WATER
-	ACT_FALLING_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
+- Talk to Yoshi.
+	ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
+	ACT_READING_NPC_DIALOG
+- Die from large fall damage.
+	ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
 SL SEGMENT:
@@ -239,30 +198,6 @@ THI SEGMENT:
 	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
 - Die to Bubba.
 	ACT_EATEN_BY_BUBBA
-	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-
--------------------------------------------
-MIPS SEGMENT:
--------------------------------------------
-
-- Catch MIPS.
-	ACT_READING_NPC_DIALOG
-	ACT_PLACING_DOWN
-- Collect the MIPS star.
-	ACT_STAR_DANCE_NO_EXIT
-
--------------------------------------------
-YOSHI SEGMENT:
--------------------------------------------
-
-- Drown in the Castle basement.
-	ACT_DROWNING
-	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-- Talk to Yoshi.
-	ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
-	ACT_READING_NPC_DIALOG
-- Die from large fall damage.
-	ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
