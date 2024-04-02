@@ -2,14 +2,10 @@ In this route, we use the demo to go to BitDW, and use MIPS for ACT_STAR_DANCE_N
 
 Uncompleted
 
-R | ACT_DROWNING
-	- water
 R | ACT_WATER_DEATH
 	- water
 R | ACT_ELECTROCUTION: ACT_SHOCKED
 	- JRB; SSL; SL; WDW; TTC; RR; VCutM; BitDW; BitFS; BitS; BitS Fight
-R | ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
-	- 
 R | ACT_DEATH_ON_BACK: ACT_HARD_BACKWARD_GROUND_KB
 	- 
 
@@ -52,6 +48,10 @@ R | ACT_STAR_DANCE_EXIT
 R | ACT_STAR_DANCE_NO_EXIT
 	- 
 R | ACT_STAR_DANCE_WATER
+	- 
+R | ACT_DROWNING
+	- water
+R | ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
 	- 
 
 -------------------------------------------
@@ -104,7 +104,10 @@ ACT_UNLOCKING_KEY_DOOR
 ACT_UNLOCKING_STAR_DOOR: ACT_READING_AUTOMATIC_DIALOG
 ACT_ENTERING_STAR_DOOR
 
-Save file: File A 119 (all but 50 star MIPS)
+Save file:
+- File A: 119 stars (all but 50 star MIPS)
+	- Moat must be undrained
+- File B: Empty
 
 -------------------------------------------
 
@@ -193,7 +196,7 @@ SSL SEGMENT:
 	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
-DDD SEGMENT:
+DDD SEGMENT 1:
 -------------------------------------------
 
 - Enter DDD.
@@ -202,7 +205,11 @@ DDD SEGMENT:
 	ACT_CAUGHT_IN_WHIRLPOOL
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
-- Re-enter DDD.
+-------------------------------------------
+DDD SEGMENT 2:
+-------------------------------------------
+
+- Enter DDD.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
 - Collect a star.
 	ACT_STAR_DANCE_WATER
@@ -245,12 +252,18 @@ MIPS SEGMENT:
 	ACT_STAR_DANCE_NO_EXIT
 
 -------------------------------------------
-YOSHI SEGMENT: (Must come after MIPS segment)
+YOSHI SEGMENT:
 -------------------------------------------
 
+- Drown in the Castle basement.
+	ACT_DROWNING
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 - Talk to Yoshi.
 	ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
 	ACT_READING_NPC_DIALOG
+- Die from large fall damage.
+	ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
 END OF RUN:
