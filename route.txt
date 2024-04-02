@@ -1,12 +1,13 @@
-In this route, we use the demo to go to BitDW, and use MIPS for ACT_STAR_DANCE_NO_EXIT.
+The knockback deaths are
+	ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
+	ACT_DEATH_ON_BACK: ACT_HARD_BACKWARD_GROUND_KB
 
-Uncompleted
-
-R | ACT_WATER_DEATH
-R | ACT_ELECTROCUTION: ACT_SHOCKED
-R | ACT_DEATH_ON_BACK: ACT_HARD_BACKWARD_GROUND_KB
-
-JRB/SL/WDW
+'DEATH SET' refers to the following set of death actions:
+	ACT_DROWNING
+	ACT_WATER_DEATH
+	ACT_ELECTROCUTION: ACT_SHOCKED
+	[knockback death]
+which are to be performed in JRB/SL/WDW/courtyard in some order.
 
 -------------------------------------------
 
@@ -110,6 +111,9 @@ JRB SEGMENT:
 	ACT_HOLD_METAL_WATER_FALL_LAND: ACT_HOLD_METAL_WATER_FALLING
 	ACT_METAL_WATER_JUMP_LAND: ACT_METAL_WATER_JUMP
 	ACT_HOLD_METAL_WATER_JUMP_LAND: ACT_HOLD_METAL_WATER_JUMP
+- Die.
+	[DEATH SET]
+	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
 BASEMENT/BBH SEGMENT:
@@ -164,15 +168,14 @@ BASEMENT/BBH SEGMENT:
 	ACT_STAR_DANCE_EXIT
 	ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
 
-[Knockback death instead?]
-- Drown in the courtyard.
-	ACT_DROWNING
+- Die in the courtyard.
+	DEATH SET
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 - Talk to Yoshi.
 	ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
 	ACT_READING_NPC_DIALOG
 - Die from large fall damage.
-	ACT_DEATH_ON_STOMACH: ACT_HARD_FORWARD_GROUND_KB
+	[whichever knockback death you don't do in JRB/SL/WDW/courtyard]
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
@@ -181,6 +184,9 @@ SL SEGMENT:
 
 - Enter SL.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Die.
+	[DEATH SET]
+	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
 WDW SEGMENT:
@@ -188,6 +194,9 @@ WDW SEGMENT:
 
 - Enter WDW.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Die.
+	[DEATH SET]
+	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 -------------------------------------------
 THI SEGMENT:
