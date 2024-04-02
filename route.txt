@@ -11,57 +11,10 @@ which are to be performed in JRB/SL/WDW/courtyard in some order.
 
 -------------------------------------------
 
-Levels that must be entered and why:
-
-- Castle Grounds/Inside/Courtyard
-- WF
-	ACT_RIDING_HOOT
-- JRB
-	It is faster to detour to JRB for metal water actions than it is to do them in DDD
-- BBH
-	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
-- HMC
-	ACT_SUFFOCATION: ACT_STANDING_DEATH
-	ACT_COUGHING: ACT_IDLE
-- SSL
-	ACT_QUICKSAND_DEATH
-	ACT_TORNADO_TWIRLING: ACT_TWIRLING
-	ACT_IN_QUICKSAND
-	ACT_QUICKSAND_JUMP_LAND
-	ACT_HOLD_QUICKSAND_JUMP_LAND
-- DDD
-	ACT_CAUGHT_IN_WHIRLPOOL
-- SL
-	SL allows the following:
-		ACT_SHIVERING: ACT_IDLE
-		ACT_LAVA_BOOST_LAND: ACT_LAVA_BOOST
-		ACT_GETTING_BLOWN: ACT_HARD_BACKWARD_AIR_KB
-	If we don't enter SSL, those have to be split up into at least three separate courses.
-	Lava boost can be done very fast in BitFS, and getting blown can be done in TTM, which we might have to go to if we don't use the MIPS star, but that would still leave shivering, and we don't yet have another reason to enter CCM or WMotR.
-- WDW
-	WDW covers these all in one course and not slowly either:
-		ACT_THROWN_FORWARD: ACT_GRABBED
-		ACT_THROWN_BACKWARD: ACT_GRABBED
-		ACT_HOLD_HEAVY_WALKING: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
-		ACT_HEAVY_THROW: ACT_HOLD_HEAVY_IDLE: ACT_PICKING_UP: ACT_PUNCHING
-- THI
-	ACT_EATEN_BY_BUBBA
-	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
-- BitS
-	ACT_END_WAVING_CUTSCENE: ACT_CREDITS_CUTSCENE: ACT_END_PEACH_CUTSCENE: ACT_JUMBO_STAR_CUTSCENE
-
--------------------------------------------
-
-Save file actions:
-
-ACT_SPECIAL_TRIPLE_JUMP: ACT_WAITING_FOR_DIALOG
-ACT_UNLOCKING_KEY_DOOR
-ACT_UNLOCKING_STAR_DOOR: ACT_READING_AUTOMATIC_DIALOG
-ACT_ENTERING_STAR_DOOR
-
 Save file:
 - File A: 119 stars (all but 50 star MIPS)
-	- Moat must be undrained
+	- Basement key door locked
+	- 30 star door locked
 - File B: Empty
 
 -------------------------------------------
@@ -119,6 +72,12 @@ JRB SEGMENT:
 BASEMENT/BBH SEGMENT:
 -------------------------------------------
 
+- Unlock the basement door.
+	ACT_UNLOCKING_KEY_DOOR
+
+- Unlock the 30 star door.
+	ACT_UNLOCKING_STAR_DOOR: ACT_READING_AUTOMATIC_DIALOG
+	ACT_ENTERING_STAR_DOOR
 - Enter DDD.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
 - Die to the whirlpool.
