@@ -112,18 +112,7 @@ JRB SEGMENT:
 	ACT_HOLD_METAL_WATER_JUMP_LAND: ACT_HOLD_METAL_WATER_JUMP
 
 -------------------------------------------
-BBH SEGMENT:
--------------------------------------------
-
-- Enter BBH.
-	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
-	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
-- Collect Secret of the Haunted Books.
-	ACT_STAR_DANCE_EXIT
-	ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
-
--------------------------------------------
-BASEMENT SEGMENT:
+BASEMENT/BBH SEGMENT:
 -------------------------------------------
 
 - Enter DDD.
@@ -164,7 +153,19 @@ BASEMENT SEGMENT:
 	ACT_QUICKSAND_DEATH
 	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
-- Drown in the Castle basement.
+- Re-enter SSL.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Pause exit.
+
+- Enter BBH.
+	ACT_BBH_ENTER_JUMP: ACT_BBH_ENTER_SPIN
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- Collect Secret of the Haunted Books.
+	ACT_STAR_DANCE_EXIT
+	ACT_SPECIAL_EXIT_AIRBORNE: ACT_EXIT_LAND_SAVE_DIALOG
+
+[Knockback death instead?]
+- Drown in the courtyard.
 	ACT_DROWNING
 	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 - Talk to Yoshi.
