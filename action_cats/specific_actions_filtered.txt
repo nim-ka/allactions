@@ -1,0 +1,62 @@
+WF; JRB; BBH; DDD; HMC; SSL; SL; WDW; THI; BitS; Castle Inside; Castle Grounds; Castle Courtyard
+hold = WF; JRB; SSL; WDW; THI; BitS; Castle Inside
+
+# regular hold actions
+ACT_HOLD_IDLE
+	- hold
+ACT_HOLD_JUMP_LAND
+	- hold
+ACT_HOLD_JUMP_LAND_STOP
+	- hold
+ACT_HOLD_JUMP
+	- hold
+ACT_HOLD_BUTT_SLIDE_AIR: ACT_HOLD_BUTT_SLIDE
+	- hold
+ACT_HOLD_FREEFALL_LAND_STOP: ACT_HOLD_FREEFALL_LAND: ACT_HOLD_FREEFALL
+	- hold
+ACT_HOLD_BUTT_SLIDE_STOP: ACT_HOLD_BUTT_SLIDE
+	- hold
+ACT_HOLD_DECELERATING: ACT_HOLD_WALKING
+	- hold
+ACT_HOLD_STOMACH_SLIDE
+	- hold
+
+# misc hold-related actions
+ACT_DIVE_PICKING_UP: ACT_DIVE_SLIDE
+	- hold
+ACT_THROWING
+	- hold
+ACT_AIR_THROW_LAND: ACT_AIR_THROW
+	- hold
+
+# general kb actions
+ACT_SOFT_BACKWARD_GROUND_KB
+	- 
+ACT_SOFT_FORWARD_GROUND_KB
+	- 
+ACT_FORWARD_GROUND_KB
+	- 
+ACT_FORWARD_AIR_KB
+	- 
+ACT_HARD_FORWARD_AIR_KB
+	- 
+
+# water actions
+ACT_WATER_JUMP
+	- water
+ACT_WATER_IDLE
+	- water
+ACT_WATER_ACTION_END
+	- water
+ACT_BREASTSTROKE
+	- water
+ACT_SWIMMING_END: ACT_FLUTTER_KICK
+	- water
+
+# cannon actions
+ACT_SHOT_FROM_CANNON: ACT_IN_CANNON
+	- WF; JRB; SSL; SL; WDW; THI; Castle Grounds
+
+# sign actions
+ACT_READING_SIGN
+	- 
