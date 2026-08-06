@@ -53,10 +53,6 @@ ACT_BREASTSTROKE
 ACT_SWIMMING_END: ACT_FLUTTER_KICK
 	- water
 
-# cannon actions
-ACT_SHOT_FROM_CANNON: ACT_IN_CANNON
-	- WF; JRB; SSL; SL; WDW; THI; Castle Grounds
-
 # sign actions
 ACT_READING_SIGN
 	- 
