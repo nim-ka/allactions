@@ -80,7 +80,7 @@ Run is done on the Japanese version.
 	ACT_SUFFOCATION: ACT_STANDING_DEATH
 	ACT_SPECIAL_DEATH_EXIT: ACT_HARD_BACKWARD_GROUND_KB
 
-- Get burnt in the castle to get down to 2 HP.
+- Get burnt in the castle to lower HP.
 	ACT_BURNING_JUMP: ACT_BURNING_GROUND
 	ACT_BURNING_FALL
 
