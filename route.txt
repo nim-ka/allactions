@@ -22,12 +22,6 @@ Run is done on the Japanese version.
 
 -------------------------------------------
 
-These segments are unordered except the start and end of the run:
-
--------------------------------------------
-START OF RUN:
--------------------------------------------
-
 - Start the game.
 	ACT_UNINITIALIZED
 - Enter file C.
@@ -170,9 +164,17 @@ START OF RUN:
 	ACT_SHOCKWAVE_BOUNCE
 - Pause exit.
 
--------------------------------------------
-SL SEGMENT:
--------------------------------------------
+- Enter THI.
+	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
+- THI actions:
+	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
+	ACT_VERTICAL_WIND
+	ACT_RIDING_SHELL_JUMP: ACT_RIDING_SHELL_GROUND
+	ACT_RIDING_SHELL_FALL: ACT_RIDING_SHELL_GROUND
+- Die to Bubba.
+	[WATER KB] (opposite JRB)
+	ACT_EATEN_BY_BUBBA
+	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
 
 - Enter SL.
 	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
@@ -199,26 +201,6 @@ SL SEGMENT:
 - Die.
 	[DEATH SET 2] (opposite SL)
 	ACT_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-
--------------------------------------------
-THI SEGMENT:
--------------------------------------------
-
-- Enter THI.
-	ACT_SPAWN_SPIN_LANDING: ACT_SPAWN_SPIN_AIRBORNE
-- THI actions:
-	ACT_EMERGE_FROM_PIPE: ACT_JUMP_LAND_STOP
-	ACT_VERTICAL_WIND
-	ACT_RIDING_SHELL_JUMP: ACT_RIDING_SHELL_GROUND
-	ACT_RIDING_SHELL_FALL: ACT_RIDING_SHELL_GROUND
-- Die to Bubba.
-	[WATER KB] (opposite JRB)
-	ACT_EATEN_BY_BUBBA
-	ACT_FALLING_DEATH_EXIT: ACT_DEATH_EXIT_LAND
-
--------------------------------------------
-END OF RUN:
--------------------------------------------
 
 - Enter BitS.
 	ACT_SPAWN_NO_SPIN_LANDING: ACT_SPAWN_NO_SPIN_AIRBORNE
